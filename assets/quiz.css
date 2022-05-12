@@ -1,0 +1,48 @@
+* {
+    font-family: 'PT Mono', monospace;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: blueviolet;
+    width: fit-content;
+    margin: auto;
+    color: white;
+    padding: 1vw;
+    margin-bottom: 1vh;
+    font-size: xx-large;
+    border-radius: 1vw;
+    max-width: 50vw;
+    max-height: 50vh;
+}
+
+header div {
+    font-size: x-large;
+}
+
+#buttons {
+    width: 40vw;
+    position: relative;
+    margin: 0;
+    height: min-content;
+    display: flex;
+    width: max-content;
+    margin: auto;
+}
+
+#questions {
+    height:fit-content;
+    text-align: left;
+    font-size:medium;
+}
+
+#qHead {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#qPrompt {
+    margin-top: -10px;
+}
