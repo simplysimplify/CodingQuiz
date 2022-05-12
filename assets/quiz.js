@@ -11,6 +11,7 @@ var t1 = document.getElementById('1')
 var t2 = document.getElementById('2')
 var t3 = document.getElementById('3')
 var t4 = document.getElementById('4')
+var qHead = document.getElementById('qHead')
 var qPrompt = document.getElementById('qPrompt')
 var score = 0
 var stuAns = [0, 0, 0, 0]
@@ -25,6 +26,8 @@ var corAnswers = [
     0, 0, 0, 1, // 9-12
     1, 1, 1, 1, // 13-16
 ]
+var timerS = document.getElementById('time')
+var time = 60
 
 
 setQNum()
@@ -32,6 +35,29 @@ windowAlertThing()
 
 function windowAlertThing() {
     window.alert("Your personal best is: " + localStorage.getItem("score"))
+    setInterval(timer, 1000)
+
+}
+
+function timer() {
+    time--;
+    timerS.innerHTML = time
+    console.log(time)
+    if (time === 0) {
+        t1.innerHTML = "Refresh to play again!"
+        t2.innerHTML = null
+        t3.innerHTML = null
+        t4.innerHTML = null
+        q1.remove()
+        q2.remove()
+        q3.remove()
+        q4.remove()
+        buttonF.remove()
+        qHead.remove()
+        qPrompt.remove()
+        window.alert("Game Over, you ran out of time!")
+        clearInterval(timer)
+    }
 }
 
 function setQNum() {
@@ -109,7 +135,8 @@ buttonF.addEventListener('click', function () {
         correct += 1
     
     if (correct != 4)
-        window.alert("Incorrect answer!")
+        window.alert("Incorrect answer! -5 seconds!")
+        time -= 5
     
     if (correct === 4)
         score += 1
