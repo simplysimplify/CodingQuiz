@@ -16,10 +16,10 @@ var qPrompt = document.getElementById('qPrompt')
 var score = 0
 var stuAns = [0, 0, 0, 0]
 var questions = ["Is coding fun?", "Why am I making a quiz?", "Are you having fun grading this?", "All four required"]
-var answers1 = ["Not particularly", "It's a good exersize for using js", "I hope you are, at least a little bit.", "All four required"]
-var answers2 = ["Literally not at all", "It forces us to use our earlier knowledge", "Probably really mind-numbing", "All four required"]
-var answers3 = ["Kinda sometimes", "It serves very little purpose other than filler assignment", "Hope this was at least a little different for you.", "All four required"]
-var answers4 = ["No", "It has lots of potential to teach us.", "This is the answer.", "All four required"]
+var answers1 = ["Not even a little bit.", "It's a good exersize for using js", "I hope you are, at least a little bit.", "All four required"]
+var answers2 = ["Literally not at all.", "It forces us to use our earlier knowledge", "Probably really mind-numbing", "All four required"]
+var answers3 = ["Yes.", "This is used to create undue stress for no value.", "Hope this was at least a little different for you.", "All four required"]
+var answers4 = ["No.", "It has lots of potential to teach us.", "This is the answer.", "All four required"]
 var corAnswers = [
     1, 1, 0, 1, // 1-4
     0, 0, 1, 0, // 5-8
